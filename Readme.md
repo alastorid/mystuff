@@ -6,7 +6,7 @@ Random stuff.
 
 ## getprice.coolpc.sh
 
-It can fetch price information from [coolpc.com.tw](coolpc.com.tw).
+It can fetch price information from [http://coolpc.com.tw](http://coolpc.com.tw) aka 天x屋.
 
 A website sells 3c products in Taiwan.
 
