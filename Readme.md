@@ -23,6 +23,16 @@ chmod +x ./getprice.coolpc.sh
 ./getprice.coolpc.sh
 ```
 
+## getprice.sinya.sh
+
+it is for sinya aka 藝人店.
+
+Please run 
+
+```bash
+rungetprice.sinya.sh
+```
+
 <!--# github support svn client, that\'s cool. :D -->
 
 
