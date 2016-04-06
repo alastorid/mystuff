@@ -1,2 +1,1 @@
-seq 100 |xargs -n1 ./getprice.sy.sh
-
+./misc/showOption.sy.sh |xargs -n1 -P0 ./getprice.sy.sh 
