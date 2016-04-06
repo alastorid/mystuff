@@ -10,7 +10,13 @@ It can fetch price information from [http://coolpc.com.tw](http://coolpc.com.tw)
 
 A website sells 3c products in Taiwan.
 
-###How to use?
+
+### Prerequisite
+
++ iconv
++ curl
+
+### How to use?
 
 ```bash
 chmod +x ./getprice.coolpc.sh
