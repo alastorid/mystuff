@@ -1,0 +1,110 @@
+'\" t
+.\"     Title: METAPIXEL
+.\"    Author: Chris Vanden Berghe
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: May  5, 2004
+.\"    Manual: [FIXME: manual]
+.\"    Source: [FIXME: source]
+.\"  Language: English
+.\"
+.TH "METAPIXEL" "1" "May 5, 2004" "[FIXME: source]" "[FIXME: manual]"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+metapixel \- generator for photomosaics
+.SH "SYNOPSIS"
+.HP \w'\fBmetapixel\-prepare\fR\ 'u
+\fBmetapixel\-prepare\fR [\fB\fIoptions\fR\fR] [srcdir] [destdir]
+.sp
+.ft B
+.nf
+prepares the pictures in srcdir by creating resized images and a table file in destdir
+.fi
+.ft
+.HP \w'\fBmetapixel\fR\ 'u
+\fBmetapixel\fR [\fB\fIoptions\fR\fR] [\-\-metapixel\ input\&.jpg\ output\&.png\ \-\-library\ destdir]
+.sp
+.ft B
+.nf
+creates a photomosaic output\&.png using input\&.jpg as the input image and destdir/tables\&.mxt as table file
+.fi
+.ft
+.SH "DESCRIPTION"
+.PP
+This manual page documents briefly the
+\fBmetapixel\fR
+and
+\fBmetapixel\-prepare\fR
+commands\&. For more information check the README file included in the distribution\&.
+.PP
+\fBmetapixel\fR
+is a program for generating photomosaics\&. It can generate classical photomosaics, in which the source image is viewed as a matrix of equally sized rectangles for each of which a matching image is substitued, as well as collage\-style photomosaics, in which rectangular parts of the source image at arbitrary positions (i\&.e\&. not aligned to a matrix) are substituted by matching images\&.
+.PP
+\fBmetapixel\-prepare\fR
+is a utility that needs to be run before metapixel can be used\&. It prepares your source images so that they can be used by
+\fBmetapixel\fR
+to create the actual photomosaic\&.
+.SH "USAGE"
+.PP
+\fBmetapixel\-prepare \fR\fBsrcdir\fR\fB \fR\fBdestdir\fR
+has to be run first\&.
+srcdir
+is the path to the directory containing the source images, e\&.g\&.
+~/Pictures/Holidays\&.
+destdir, e\&.g\&.
+~/\&.metapixel, is the path to the directory where you want to store the rescaled images and the
+tables\&.mxt
+index file\&. This directory should be created manually before running
+\fBmetapixel\-prepare\fR\&.
+.PP
+\fBmetapixel \-\-metapixel \fR\fBinput\&.jpg\fR\fB \fR\fBoutput\&.png\fR\fB \-\-library \fR\fBdestdir\fR
+is then used to transform an image (input\&.jpg) into a mosaic (output\&.png) using the source images (described by
+destdir/tables\&.mxt)\&.
+.SH "OPTIONS"
+.PP
+The options are described in the README file or by running
+\fBmetapixel\fR
+or
+\fBmetapixel\-prepare\fR
+with the \-\-help option\&.
+.SH "SEE ALSO"
+.PP
+The README file is included in the Metapixel distribution\&.
+.SH "AUTHOR"
+.PP
+This manual page was written by Chris Vanden Berghe
+<Chris@VandenBerghe\&.org>
+for the
+Debian(TM)
+system (but may be used by others)\&. Permission is granted to copy, distribute and/or modify this document under the terms of the
+GNU
+General Public License, Version 2 any later version published by the Free Software Foundation\&.
+.PP
+On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common\-licenses/GPL\&.
+.SH "AUTHOR"
+.PP
+\fBChris Vanden Berghe\fR
+.RS 4
+Author.
+.RE
+.SH "COPYRIGHT"
+.br
+Copyright \(co 2004 Chris Vanden Berghe
+.br
