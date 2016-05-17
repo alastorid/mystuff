@@ -4,6 +4,12 @@
 
 Random stuff.
 
+## getmark2.coolpc.sh
+
+Shows GFX cards which you can get from coolpc its price and merit.
+
+[Sample output](./m2.png)
+
 ## getprice.coolpc.sh
 
 It can fetch price information from [http://coolpc.com.tw](http://coolpc.com.tw) aka 天x屋.
