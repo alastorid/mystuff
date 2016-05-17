@@ -8,7 +8,7 @@ Random stuff.
 
 Shows GFX cards which you can get from coolpc its price and merit.
 
-[Sample output](./m2.png)
+![Sample output](./m2.png)
 
 ## getprice.coolpc.sh
 
