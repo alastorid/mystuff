@@ -5,8 +5,8 @@ FIY
 
 ## usage:
 
-``bash
+```bash
 
 ./getMapInfo.sh |./gmi2dot.sh |dot -Tpng | display -
 
-``
+```
