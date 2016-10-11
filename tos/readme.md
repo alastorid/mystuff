@@ -25,23 +25,23 @@ Okay... but what is 2471?
 
 The number is the last part of an url from a map description of tosbase.
 
-For example:
+For example 2471 is:
 
-![http://www.tosbase.com/game/world-map/2471](http://www.tosbase.com/game/world-map/2471)
+[http://www.tosbase.com/game/world-map/2471](http://www.tosbase.com/game/world-map/2471)
 
 ## Requirement:
 
-- curl
+- **curl**
 	for fetching data
-- sed
+- **sed**
 	for data processing
-- grep
+- **grep**
 	for data processing
-- dot
+- **dot**
 	for making charts
-- bash
+- **bash**
 	for scripting
-- image magick
+- **image magick**
 	for `display`
 
 Note that sed is supposed to be a "gsed". So if you are using BSD based platform you might encounter problems running these scripts.
