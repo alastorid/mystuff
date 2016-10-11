@@ -11,8 +11,8 @@ read line
 echo $line | sed 's/map \([^$]*\)/ map [shape=box,color=black, label="\1"]/;'
 
 while read line; do     
-  exp=`echo "$c ${line}" | sed 's/\([0-9]\+\) [^ ]* p=\([0-9]*\) r=\([0-9]*\) name="\([^"]*\)" hp=\([0-9]*\) xp=\([0-9]*\) xpjob=\([0-9]*\)/\6/'`
-  echo -n "$c ${line}" | sed 's/\([0-9]\+\) [^ ]* p=\([0-9]*\) r=\([0-9]*\) name="\([^"]*\)" hp=\([0-9]*\) xp=\([0-9]*\) xpjob=\([0-9]*\)/'"$FORMAT"'/'
+  exp=`echo "$c ${line}" | sed 's/\([0-9]\+\) [^ ]* p=\([0-9]*\) r=\([0-9.]*\) name="\([^"]*\)" hp=\([0-9]*\) xp=\([0-9]*\) xpjob=\([0-9]*\)/\6/'`
+  echo -n "$c ${line}" | sed 's/\([0-9]\+\) [^ ]* p=\([0-9]*\) r=\([0-9.]*\) name="\([^"]*\)" hp=\([0-9]*\) xp=\([0-9]*\) xpjob=\([0-9]*\)/'"$FORMAT"'/'
   if (( $exp > 3000 ))
   then
     echo "limegreen,shape=box,style=filled]"
