@@ -54,12 +54,25 @@ Note that sed is supposed to be a "gsed". So if you are using BSD based platform
 
 ```
 
-multiple usage.
+batch
 
 
 ```bash
 
 curl -sv "http://www.tosbase.com/database/maps/?name=&order=Level&type=Field&page=5" |&grep -o "game/world-map/[0-9]*/" |sed 's/[^0-9]//g'|xargs -n1 -P0 ./getMapInfo.sh 
+
+```
+
+lots of picture
+
+```bash
+
+$ cat ./a.sh
+
+#!/bin/bash
+
+./getMapInfo.sh $1 |./gmi2dot.sh |dot -Tpng -o "out/$1.png"
+$ curl -sv "http://www.tosbase.com/database/maps/?name=&order=Level&type=Field&page=4" |&grep -o "game/world-map/[0-9]*/" |sed 's/[^0-9]//g'|xargs -n1 -P0 "./a.sh"
 
 ```
 
