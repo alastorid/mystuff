@@ -2,7 +2,7 @@ UserAgent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0"
 ConcurrentRequest=8
 Id="$1"
 getItemsByIdAndPages(){
-  curl -s "http://class.ruten.com.tw/user/index00.php?s=$1&p=$2" -H 'Host: class.ruten.com.tw' -H "User-Agent: $UserAgent" -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5'-H 'Connection: keep-alive'|sed -n '/<a href=\"http:\/\/goods.*\/a>/ {s/[^<]*<a href="\([^"]*\)">\(.*\)<\/a>/\1 "\2"/;h};/<span class="item-direct-price"/ {n;n;s/^[ \t]*//g;H;x;s/\n/ /;p}'
+  curl -s "http://class.ruten.com.tw/user/index00.php?s=$1&p=$2" -H 'Host: class.ruten.com.tw' -H "User-Agent: $UserAgent" -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5'-H 'Connection: keep-alive'|sed -n '/<a href=\"http:\/\/goods.*\/a>/ {s/.*[^<]*<a href="\([^"]*\)">\(.*\)<\/a>/\1 "\2"/;h};/<span class="item-direct-price"/ {n;n;s/^[ \t]*//g;H;x;s/\n/ /;p}'
 }
 export -f getItemsByIdAndPages
 export Id
